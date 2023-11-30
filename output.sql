@@ -66,16 +66,15 @@ ORDER BY qty DESC;
 
 SELECT 
     M.campaign_name,
-    ROUND(AVG(T.quantity * S.price), 2) AS total_revenue,
-    T.purchase_date
+    ROUND(Sum(T.quantity * S.price) / (DATEDIFF(M.end_date, M.start_date)),
+            2) AS avg_revenue_per_day
 FROM
     transactions T
         JOIN
     marketing_campaigns M USING (product_id)
         JOIN
     sustainable_clothing S USING (product_id)
-GROUP BY campaign_name , purchase_date
-ORDER BY campaign_name , purchase_date;
+GROUP BY campaign_name , M.start_date , M.end_date;
 
 /* 7. What is the percentage contribution of each product to the total revenue? */
 
