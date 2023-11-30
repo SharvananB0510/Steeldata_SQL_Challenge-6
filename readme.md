@@ -2,7 +2,7 @@
 
 This contribution is part of the 6 challenges presented by Steel Data.
 
-For access to the dataset, follow this [link](https://www.steeldata.org.uk/sql6.html).
+Get the dataset [link](https://www.steeldata.org.uk/sql6.html).
 
 ## Challange Overview
 The challenge aimed to analyze the marketing campaigns conducted by 'Sustainable Clothing Co.' and answer several key questions. By leveraging SQL queries, I delved into the provided data and extracted valuable insights related to transaction details, product performance, revenue generation, and more.
